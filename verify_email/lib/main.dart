@@ -3,9 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:verify_email/page/login_page.dart';
 import 'package:verify_email/page/registrationpage.dart';
 import 'package:verify_email/page/user_dashboard_page.dart';
-
 
 import 'page/admin_dashboard_page.dart';
 import 'page/launcher_page.dart';
@@ -40,9 +40,9 @@ class MyApp extends StatelessWidget {
         routes: {
           DashboardPage.routeName: (_) => const DashboardPage(),
           LauncherPage.routeName: (_) => const LauncherPage(),
-          LoginPage.routeName: (_) => const LoginPage(),
           UserDashboardPage.routeName: (_) => const UserDashboardPage(),
           RegistrationPage.routeName: (_) => const RegistrationPage(),
+          LoginScreen.routeName: (_) =>  LoginScreen(),
         },
       );
     });

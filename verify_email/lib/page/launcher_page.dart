@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:verify_email/page/login_page.dart';
 
 
 import '../auth/auth_service.dart';
@@ -19,7 +20,7 @@ class _LauncherPageState extends State<LauncherPage> {
   void initState() {
     Future.delayed(Duration.zero, () {
       if(AuthService.user == null) {
-        Navigator.pushReplacementNamed(context, LoginPage.routeName);
+        Navigator.pushReplacementNamed(context, LoginScreen.routeName);
       } else {
         Navigator.pushReplacementNamed(context, DashboardPage.routeName);
       }

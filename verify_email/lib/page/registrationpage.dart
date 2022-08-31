@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:verify_email/auth/auth_service.dart';
 
 import '../custom_assets/colors.dart';
@@ -56,9 +57,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -68,7 +69,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     clipper: MyCustomClipper(),
                     child: Container(
                       color: AppColors.blueColor1,
-                      height: 150,
+                      height: 150.h,
                     ),
                   ),
                   Positioned(
@@ -95,52 +96,52 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10.h,),
                     //TextField
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: TextWidget(userNameController, 'Username'),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 5.h,
                     ),
                     //TextField
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: TextWidget(fullNameController, 'Full name'),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 5.h,
                     ),
                     //TextField
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: TextWidget(countryController, 'Country'),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 5.h,
                     ),
                     //TextField
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: TextWidget(emailController, 'E-mail'),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 5.h,
                     ),
                     //TextField
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: TextWidget(phoneController, 'Phone number'),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     //  Gender
                     Row(
                       children: [
                         const Text('Gender',style: TextStyle(color: AppColors.blueColor,fontSize: 16),),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 20.w,),
                         ElevatedButton(
                           onPressed: _checkGenderValue,
                           child: const Text('Male'),
@@ -149,7 +150,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                               textStyle: TextStyle(
                                   fontWeight: FontWeight.bold)),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: 10.w,),
                         ElevatedButton(
                           onPressed: _checkGenderValue,
                           child: const Text('Female'),
@@ -161,16 +162,16 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     //Date Of Birth
                     Row(
                       children: [
-                        const Text('Date Of Birth',style: TextStyle(color: AppColors.blueColor,fontSize: 16),),
-                        SizedBox(width: 20,),
+                        Text('Date Of Birth',style: TextStyle(color: AppColors.blueColor,fontSize: 16.sp),),
+                        SizedBox(width: 20.w,),
                         SizedBox(
-                          height: 28,
-                          width: 50,
+                          height: 28.h,
+                          width: 50.w,
                           child: TextField(
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.number,
@@ -180,13 +181,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
                               hintText: 'DD',
                               filled: true,
                               fillColor: AppColors.blueColor,
-                              hintStyle: TextStyle(color: Colors.white,fontSize: 14),),
+                              hintStyle: TextStyle(color: Colors.white,fontSize: 14.sp),),
                           ),
                         ),
                         SizedBox(width: 10,),
                         SizedBox(
-                          height: 28,
-                          width: 50,
+                          height: 28.h,
+                          width: 50.w,
                           child: TextField(
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.number,
@@ -196,13 +197,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
                               hintText: 'MM',
                               filled: true,
                               fillColor: AppColors.blueColor,
-                              hintStyle: TextStyle(color: Colors.white,fontSize: 14),),
+                              hintStyle: TextStyle(color: Colors.white,fontSize: 14.sp),),
                           ),
                         ),
                         SizedBox(width: 10,),
                         SizedBox(
-                          height: 28,
-                          width: 65,
+                          height: 28.h,
+                          width: 65.w,
                           child: TextField(
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.number,
@@ -212,17 +213,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
                               hintText: 'YYYY',
                               filled: true,
                               fillColor: AppColors.blueColor,
-                              hintStyle: TextStyle(color: Colors.white,fontSize: 14),),
+                              hintStyle: TextStyle(color: Colors.white,fontSize: 14.sp),),
                           ),
                         ),
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     //Password
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: TextFormField(
                         obscureText: isObscureText,
                         textAlign: TextAlign.center,
@@ -284,8 +285,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                               borderRadius: BorderRadius.circular(12),
                               color: AppColors.blueColor1
                           ),
-                          height: 40,
-                          width: 200,
+                          height: 40.h,
+                          width: 200.w,
                           child: Center(child: const Text('Create account',style: TextStyle(color: Colors.white,fontSize: 18),),),
                         ),
                       ),
